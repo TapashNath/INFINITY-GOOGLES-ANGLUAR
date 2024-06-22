@@ -1,0 +1,696 @@
+
+.page_content
+{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 74px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.page_content .heading
+{
+    position: relative;
+    padding: 0px 30px;
+}
+.page_content .heading h1
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: #212121;
+}
+
+
+.page_content .cms_items_ind
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    margin-top: 30px;
+}
+.page_content .cms_items_ind li
+{
+    position: relative;
+    list-style: none;
+    padding: 0px 10px;
+}
+.page_content .cms_items_ind li a
+{
+    position: relative;
+    text-decoration: none;
+    padding: 0px 10px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    color: #666666;
+    font-weight: 600;
+    cursor: pointer;
+}
+.page_content .cms_items_ind li a.active
+{
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+
+.page_content .cms_items
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+/* ============== About Us ============== */
+
+.page_content .cms_items .about_section
+{
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+.page_content .cms_items .about_section .section_form
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page_content .cms_items .about_section .section_form .form_box_1
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.page_content .cms_items .about_section .section_form .form_box_1 h5
+{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    color: #111;
+}
+.page_content .cms_items .about_section .section_form .form_box_1 .input_box
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+}
+.page_content .cms_items .about_section .section_form .form_box_1 .input_box textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #3e3e3e;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.page_content .cms_items .about_section .section_form .form_btns
+{
+    position: relative;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+.page_content .cms_items .about_section .section_form .form_btns button
+{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.page_content .cms_items .about_section .section_form .form_btns button:first-child
+{
+    background: #212121;
+    border: 1px solid #212121;
+    color: #fff;
+    margin-right: 10px;
+}
+.page_content .cms_items .about_section .section_form .form_btns button:last-child
+{
+    background: transparent;
+    border: 1px solid #212121;
+    color: #212121;
+}
+
+/* ============== Contact Us ============== */
+
+.page_content .cms_items .contact_section
+{
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+.page_content .cms_items .contact_section .section_form
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page_content .cms_items .contact_section .section_form .form_box_1
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.page_content .cms_items .contact_section .section_form .form_box_2
+{
+    position: relative;
+    width: 50%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.page_content .cms_items .contact_section .section_form .form_box_1 h5,
+.page_content .cms_items .contact_section .section_form .form_box_2 h5
+{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    color: #111;
+}
+.page_content .cms_items .contact_section .section_form .form_box_1 .input_box
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+}
+.page_content .cms_items .contact_section .section_form .form_box_1 .input_box textarea
+{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #3e3e3e;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.page_content .cms_items .contact_section .section_form .form_box_2 .input_box
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    border: 1px solid #d8d8d8;
+}
+.page_content .cms_items .contact_section .section_form .form_box_2 .input_box input
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.page_content .cms_items .contact_section .section_form .form_btns
+{
+    position: relative;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+.page_content .cms_items .contact_section .section_form .form_btns button
+{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.page_content .cms_items .contact_section .section_form .form_btns button:first-child
+{
+    background: #212121;
+    border: 1px solid #212121;
+    color: #fff;
+    margin-right: 10px;
+}
+.page_content .cms_items .contact_section .section_form .form_btns button:last-child
+{
+    background: transparent;
+    border: 1px solid #212121;
+    color: #212121;
+}
+
+/* ============== Terms ============== */
+
+.page_content .cms_items .terms_section
+{
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+.page_content .cms_items .terms_section .section_form
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page_content .cms_items .terms_section .section_form .form_box_1
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.page_content .cms_items .terms_section .section_form .form_box_1 h5
+{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    color: #111;
+}
+.page_content .cms_items .terms_section .section_form .form_box_1 .input_box
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+}
+.page_content .cms_items .terms_section .section_form .form_box_1 .input_box textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #3e3e3e;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.page_content .cms_items .terms_section .section_form .form_btns
+{
+    position: relative;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+.page_content .cms_items .terms_section .section_form .form_btns button
+{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.page_content .cms_items .terms_section .section_form .form_btns button:first-child
+{
+    background: #212121;
+    border: 1px solid #212121;
+    color: #fff;
+    margin-right: 10px;
+}
+.page_content .cms_items .terms_section .section_form .form_btns button:last-child
+{
+    background: transparent;
+    border: 1px solid #212121;
+    color: #212121;
+}
+
+/* ============== Privacy ============== */
+
+.page_content .cms_items .privacy_section
+{
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+.page_content .cms_items .privacy_section .section_form
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page_content .cms_items .privacy_section .section_form .form_box_1
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.page_content .cms_items .privacy_section .section_form .form_box_1 h5
+{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    color: #111;
+}
+.page_content .cms_items .privacy_section .section_form .form_box_1 .input_box
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+}
+.page_content .cms_items .privacy_section .section_form .form_box_1 .input_box textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #3e3e3e;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.page_content .cms_items .privacy_section .section_form .form_btns
+{
+    position: relative;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+.page_content .cms_items .privacy_section .section_form .form_btns button
+{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.page_content .cms_items .privacy_section .section_form .form_btns button:first-child
+{
+    background: #212121;
+    border: 1px solid #212121;
+    color: #fff;
+    margin-right: 10px;
+}
+.page_content .cms_items .privacy_section .section_form .form_btns button:last-child
+{
+    background: transparent;
+    border: 1px solid #212121;
+    color: #212121;
+}
+
+/* ============== Payment ============== */
+
+.page_content .cms_items .payment_section
+{
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+.page_content .cms_items .payment_section .section_form
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page_content .cms_items .payment_section .section_form .form_box_1
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.page_content .cms_items .payment_section .section_form .form_box_1 h5
+{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    color: #111;
+}
+.page_content .cms_items .payment_section .section_form .form_box_1 .input_box
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+}
+.page_content .cms_items .payment_section .section_form .form_box_1 .input_box textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #3e3e3e;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.page_content .cms_items .payment_section .section_form .form_btns
+{
+    position: relative;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+.page_content .cms_items .payment_section .section_form .form_btns button
+{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.page_content .cms_items .payment_section .section_form .form_btns button:first-child
+{
+    background: #212121;
+    border: 1px solid #212121;
+    color: #fff;
+    margin-right: 10px;
+}
+.page_content .cms_items .payment_section .section_form .form_btns button:last-child
+{
+    background: transparent;
+    border: 1px solid #212121;
+    color: #212121;
+}
+
+/* ============== Return ============== */
+
+.page_content .cms_items .return_section
+{
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+.page_content .cms_items .return_section .section_form
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page_content .cms_items .return_section .section_form .form_box_1
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.page_content .cms_items .return_section .section_form .form_box_1 h5
+{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    color: #111;
+}
+.page_content .cms_items .return_section .section_form .form_box_1 .input_box
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+}
+.page_content .cms_items .return_section .section_form .form_box_1 .input_box textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #3e3e3e;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.page_content .cms_items .return_section .section_form .form_btns
+{
+    position: relative;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+.page_content .cms_items .return_section .section_form .form_btns button
+{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.page_content .cms_items .return_section .section_form .form_btns button:first-child
+{
+    background: #212121;
+    border: 1px solid #212121;
+    color: #fff;
+    margin-right: 10px;
+}
+.page_content .cms_items .return_section .section_form .form_btns button:last-child
+{
+    background: transparent;
+    border: 1px solid #212121;
+    color: #212121;
+}
+
+/* ============== Banner ============== */
+
+.page_content .cms_items .banner_section
+{
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+.page_content .cms_items .banner_section .section_item
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section .banner_img
+{
+    position: relative;
+    width: 33.3%;
+    height: 170px;
+    padding: 5px 10px;
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section .banner_img a
+{
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border: 0.2px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section .banner_img a::before
+{
+    position: absolute;
+    content: '\00d7';
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    width: 15px;
+    height: 15px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section .banner_img:last-child a:before
+{
+    display: none;
+    pointer-events: none;
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section .banner_img a img
+{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section .banner_img a i
+{
+    position: relative;
+    font-size: 35px;
+    color: #bebebe;
+}
+.page_content .cms_items .banner_section .section_item .banner_img_section .banner_img a span
+{
+    position: relative;
+    font-size: 12px;
+    margin-top: 8px;
+    color: #8e8e8e;
+}
+
+.page_content .cms_items .banner_section .section_item .img_desp_section
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.page_content .cms_items .banner_section .section_item .img_desp_section li
+{
+    position: relative;
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: #8e8e8e;
+}
+.page_content .cms_items .banner_section .section_item .img_desp_section li span
+{
+    color: #3f3f3f;
+    margin-right: 5px;
+}

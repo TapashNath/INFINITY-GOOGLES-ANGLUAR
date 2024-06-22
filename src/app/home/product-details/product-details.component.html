@@ -1,0 +1,138 @@
+
+<div class="product_details_page">
+
+    <div class="product_details_section">
+
+        <!-- left panel -->
+
+        <div class="left_panel">
+            <swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" [spaceBetween]="10"
+                 [thumbs]="{ swiper: thumbsSwiper }" class="mySwiper2">
+                <ng-template swiperSlide><img src="../../assets/img/spec1.png" /></ng-template>
+                <ng-template swiperSlide><img src="../../assets/img/spec2.png" /></ng-template>
+                <ng-template swiperSlide><img src="../../assets/img/spec3.png" /></ng-template>
+                <ng-template swiperSlide><img src="../../assets/img/spec4.png" /></ng-template>
+            </swiper>
+            <swiper (swiper)="thumbsSwiper = $event" [spaceBetween]="10" [slidesPerView]="4" [freeMode]="true"
+                [watchSlidesProgress]="true" class="mySwiper">
+                <ng-template swiperSlide><img src="../../assets/img/spec1.png" /></ng-template>
+                <ng-template swiperSlide><img src="../../assets/img/spec2.png" /></ng-template>
+                <ng-template swiperSlide><img src="../../assets/img/spec3.png" /></ng-template>
+                <ng-template swiperSlide><img src="../../assets/img/spec4.png" /></ng-template>
+            </swiper>
+        </div>
+
+        <!-- right panel -->
+
+        <div class="right_panel">
+            <div class="panel_content">
+                <div class="product_name_sec">
+                    <h2>Burberry Eyeglasses Look</h2>
+                    <p>Rs. 850.00</p>
+                </div>
+                <div class="product_description_section">
+                    <div class="color_sec">
+                        <h5>Colour :</h5>
+                        <div class="box_sec">
+                            <div class="color_box" style="background: #ae0d23;"></div>
+                            <div class="color_box" style="background: #14191c;"></div>
+                            <div class="color_box" style="background: rgb(228, 228, 228);"></div>
+                        </div>
+                    </div>
+                    <div class="quantity_sec">
+                        <h5>Quantity :</h5>
+                        <div class="input_box">
+                            <input type="number" value="1">
+                        </div>
+                    </div>
+                    <div class="size_sec">
+                        <h5>Size :</h5>
+                        <div class="input_box">
+                            <select id="">
+                                <option value="0">--Select Size--</option>
+                                <option value="1">Size 1</option>
+                                <option value="2">Size 2</option>
+                            </select>
+                        </div>
+                        <a href="#">Size Chart</a>
+                    </div>
+                    <div class="feature_sec">
+                        <h5>Product Features :</h5>
+                        <p>Anti-fog, Metal Frame</p>
+                    </div>
+                    <div class="btns_sec">
+                        <button>Add Precription</button>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="delivery_details_sec">
+                        <div class="sec_row">
+                            <span>Delivery Time :</span>
+                            <p>3 - 5 working days</p>
+                        </div>
+                        <div class="sec_row">
+                            <span>Shipping Charges :</span>
+                            <p>Rs. 40.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product_description_section">
+        <div class="ind_section">
+            <div class="section_item">
+                <a [ngClass]="ind1 === true? 'active':''" (click)="descriptionShow()">Description</a>
+                <a [ngClass]="ind2 === true? 'active':''" (click)="detailsShow()">Product Details</a>
+            </div>
+        </div>
+        <div class="item_section">
+            <div class="description_box" *ngIf="show1">
+                <div class="box_item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a inventore, eaque id consectetur omnis porro tenetur, cupiditate eos distinctio nobis labore magnam natus ipsa numquam fugit aliquid quis eligendi officia dolores explicabo adipisci ad. Doloribus consequatur perferendis, accusamus quam magni ratione, exercitationem nulla mollitia vitae provident similique delectus aliquam, est praesentium quas dolor maxime ullam quidem aliquid. Quas nostrum veritatis commodi magnam earum voluptatum nihil vero minima doloremque mollitia.</p>
+                    <a href="#">Read More...</a>
+                </div>
+            </div>
+            <div class="details_box" *ngIf="show2">
+                <div class="box_table">
+                    <div class="table_body">
+                        <div class="table_row">
+                            <h5>Weight</h5>
+                            <p>17 gm</p>
+                        </div>
+                        <div class="table_row">
+                            <h5>Dimensions</h5>
+                            <p>52 x 17 x 142</p>
+                        </div>
+                        <div class="table_row">
+                            <h5>Product Features</h5>
+                            <p>Anti-Glare, Anti-Fog</p>
+                        </div>
+                        <div class="table_row">
+                            <h5>Property</h5>
+                            <p>Short sleeves</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_table">
+                    <div class="table_body">
+                        <div class="table_row">
+                            <h5>Frame Size</h5>
+                            <p>Eye 52, Eye 54, Eye 55</p>
+                        </div>
+                        <div class="table_row">
+                            <h5>Frame Type</h5>
+                            <p>Full Rim</p>
+                        </div>
+                        <div class="table_row">
+                            <h5>Warranty</h5>
+                            <p>1 Year Manufacturer Warranty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.pageNav {
+  position: relative;
+  width: 100%;
+}
+
+.pageContent {
+  position: relative;
+  width: 100%;
+}
+
+.pageFooter {
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+}

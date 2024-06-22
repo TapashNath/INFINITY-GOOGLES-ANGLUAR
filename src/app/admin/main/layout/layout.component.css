@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: #fff;
+}
+
+/* ================ dashboard page ================== */
+
+.wrapper .dashboard_page {
+  position: relative;
+  width: calc(100% - 250px);
+  height: 100%;
+  /* border: 0.2px solid #f00; */
+  /* display: flex; */
+  flex-direction: column;
+}

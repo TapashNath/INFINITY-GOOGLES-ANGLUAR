@@ -1,0 +1,21 @@
+<div class="sidebar">
+  <div class="logo"><img src="../../assets/img/PageLogo.png" alt=""></div>
+  <div class="sidebar_content">
+    <div class="side_items">
+      <li routerLinkActive="active" ><a [routerLink]="['/admin/dashboard']"><i class="fa-solid fa-border-all"></i>Dashboard</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/admin/usermanagement']"><i class="fa-solid fa-users"></i>User
+          Management</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/admin/productmanagement']"><i
+           class="fa-solid fa-bag-shopping"></i>Product Management</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/admin/order']"><i class="fa-solid fa-cart-shopping"></i>Order
+          Management</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/admin/cms']"><i class="fa-solid fa-file-lines"></i>CMS
+          Content</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/admin/extra']"><i class="fa-solid fa-file-lines"></i>Extra
+              Content</a></li>
+    </div>
+    <div class="logout_btn">
+      <button (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>

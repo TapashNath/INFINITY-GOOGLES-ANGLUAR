@@ -1,0 +1,196 @@
+<div class="account_page">
+    <div class="page_left">
+        <a [ngClass]="lInd1 === true? 'active':''" (click)="showAccountSec()">My Account</a>
+        <a [ngClass]="lInd2 === true? 'active':''" (click)="showOrderSec()">My Orders</a>
+        <a [ngClass]="lInd3 === true? 'active':''" (click)="showAddressSec()">Manage Address</a>
+        <a [ngClass]="lInd4 === true? 'active':''" (click)="showChangePassSec()">Change Password</a>
+        <a >Logout</a>
+    </div>
+    <div class="page_right">
+        <div class="account_section" *ngIf="accountSec">
+            <div class="section_top">
+                <div class="head">
+                    <h1>My Account</h1>
+                </div>
+            </div>
+            <div class="section_bottom">
+                <div class="input_box">
+                    <input type="text" placeholder="First Name">
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Contact Number">
+                </div>
+                <div class="btn">
+                    <button>Update</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="address_section" *ngIf="addressSec">
+            <div class="section_top">
+                <div class="head">
+                    <h1>Manage Addresses</h1>
+                    <button *ngIf="headBtn" (click)="addressAddForm()">Add New Address</button>
+                </div>
+            </div>
+            <div class="section_bottom">
+                <div class="blank" *ngIf="blank">
+                    <div class="blank_content">
+                        <img src="../../assets/img/Group 14057.svg" alt="">
+                        <h3>No Address Yet!</h3>
+                        <p>Please add your address for your better experience</p>
+                        <button (click)="addressAddForm()">Add New Address</button>
+                    </div>
+                </div>
+                <div class="address_box_sec" *ngIf="addressBox">
+                    <div class="address_box">
+                        <div class="box_details">
+                            <div class="boxTop">
+                                <h4>Brett Garcia - Home</h4>
+                                <a >+44 3445 2344 23</a>
+                                <p>6 Galaxy Apartment, Opposite St Johns Cathedral, 75008, England</p>
+                            </div>
+                            <div class="boxBottom">
+                                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_box">
+                        <div class="box_details">
+                            <div class="boxTop">
+                                <h4>Brett Garcia - Work</h4>
+                                <a >+44 3445 2344 23</a>
+                                <p>6 Galaxy Apartment, Opposite St Johns Cathedral, 75008, England</p>
+                            </div>
+                            <div class="boxBottom">
+                                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="change_password_section" *ngIf="changePassSec">
+            <div class="section_top">
+                <div class="head">
+                    <h1>Change Password</h1>
+                </div>
+            </div>
+            <div class="section_bottom">
+                <div class="input_box">
+                    <input type="text" placeholder="First Name">
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Contact Number">
+                </div>
+                <div class="btn">
+                    <button>Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="order_section" *ngIf="orderSec">
+            <div class="section_top">
+                <div class="head">
+                    <h1>My Orders</h1>
+                </div>
+            </div>
+            <div class="section_bottom">
+                <div class="order_box">
+                    <div class="top_part">
+                        <h4>Order ID: <span>#321DERSTG</span></h4>
+                        <a>Invoice</a>
+                    </div>
+                    <div class="bottom_part">
+                        <h5>Order Date: <span>November 5, 2020</span></h5>
+                        <p>Total (tax incl.): <span>Rs. 368.00</span></p>
+                    </div>
+                </div>
+                <div class="order_box">
+                    <div class="top_part">
+                        <h4>Order ID: <span>#321DERSTG</span></h4>
+                        <a>Invoice</a>
+                    </div>
+                    <div class="bottom_part">
+                        <h5>Order Date: <span>November 5, 2020</span></h5>
+                        <p>Total (tax incl.): <span>Rs. 368.00</span></p>
+                    </div>
+                </div>
+                <div class="order_box">
+                    <div class="top_part">
+                        <h4>Order ID: <span>#321DERSTG</span></h4>
+                        <a>Invoice</a>
+                    </div>
+                    <div class="bottom_part">
+                        <h5>Order Date: <span>November 5, 2020</span></h5>
+                        <p>Total (tax incl.): <span>Rs. 368.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="address_wrapper" *ngIf="adWrapper">
+    <div class="address_add_form" *ngIf="addAddress">
+        <div class="box_top">
+            <h2>Add Address</h2>
+            <a (click)="addressAddForm()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="box_form">
+            <div class="input_box">
+                <li>
+                    <input type="checkbox" id="home">
+                    <label for="home">Home</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="work">
+                    <label for="work">Work</label>
+                </li>
+            </div>
+            <div class="input_box_1">
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="input_box_1">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="input_box_1">
+                <input type="text" placeholder="Phone Number">
+            </div>
+            <div class="input_box">
+                <h5>Shipping Address</h5>
+            </div>
+            <div class="input_box">
+                <input type="text" placeholder="Address Line 1">
+            </div>
+            <div class="input_box">
+                <input type="text" placeholder="Address Line 2">
+            </div>
+            <div class="input_box_1">
+                <input type="text" placeholder="Zip Code">
+            </div>
+            <div class="input_box_1">
+                <input type="text" placeholder="Country">
+            </div>
+            <div class="btn">
+                <button (click)="afterSave()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

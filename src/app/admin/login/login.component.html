@@ -1,0 +1,30 @@
+<div  [ngClass]="show === true? 'login_page':'login_page active'">
+    <div class="page_left">
+        <div class="form_box">
+            <div class="box_head">
+                <div class="logo"><img src="../../assets/img/Logo.png" alt=""></div>
+                <p>Login and join social gym community</p>
+            </div>
+            <form #loginForm="ngForm" (ngSubmit)="checkLogin(loginForm.value)">
+                <div class="input_field">
+                    <input type="text" ngModel name="email" placeholder="Email ID" required>
+                </div>
+                <div class="input_field">
+                    <input [type]="changeType === true?'password':'text'" ngModel name="password" placeholder="Password"
+                      required>
+                    <i [ngClass]="visible === false?'fa-solid fa-eye':'fa-solid fa-eye-slash'" (click)="viewpass()"></i>
+                </div>
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="page_right">
+        <div class="right_content">
+            <i class="fa-solid fa-image"></i>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti consequuntur tempora amet cumque, minima debitis animi facere distinctio reprehenderit reiciendis.</p>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

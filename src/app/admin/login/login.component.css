@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login_page
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #fff;
+
+}
+.login_page.active
+{
+    display: none;
+
+}
+.login_page .page_left
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    /* border: 0.2px solid red; */
+    align-items: center;
+    justify-content: center;
+}
+.login_page .page_left .form_box
+{
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.login_page .page_left .form_box .box_head
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.login_page .page_left .form_box .box_head .logo
+{
+    position: relative;
+    width: 100%;
+}
+.login_page .page_left .form_box .box_head .logo img
+{
+    position: relative;
+    width: 200px;
+    height: auto;
+}
+.login_page .page_left .form_box .box_head p
+{
+    position: relative;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666666;
+    font-family: 'Poppins', sans-serif;
+}
+.login_page .page_left .form_box form
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.login_page .page_left .form_box form .input_field
+{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+}
+.login_page .page_left .form_box form .input_field i
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #666666;
+    cursor: pointer;
+}
+.login_page .page_left .form_box form .input_field input
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 6px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444;
+
+    border: 1px solid #00000033;
+    outline: none;
+}
+.login_page .page_left .form_box form .input_field input:is(:focus, :valid)
+{
+    border-color: #111;
+}
+.login_page .page_left .form_box form button
+{
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background: #111;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+.login_page .page_left .form_box form button a
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.login_page .page_right
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 0.2px solid red; */
+    background: #787878;
+}
+.login_page .page_right .right_content
+{
+    position: relative;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.login_page .page_right .right_content i
+{
+    position: relative;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.386);
+}
+.login_page .page_right .right_content h1
+{
+    position: relative;
+    margin-top: 30px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #b8b8b8;
+}
+.login_page .page_right .right_content p
+{
+    position: relative;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #b8b8b8;
+}

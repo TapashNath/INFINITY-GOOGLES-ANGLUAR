@@ -1,0 +1,456 @@
+.product_details_page
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 0.2px solid #f00; */
+    font-family: 'Poppins', sans-serif;
+}
+.product_details_section
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    min-height: 200px;
+    /* border: 0.2px solid #f00; */
+    padding: 50px 60px;
+}
+
+/* =========== left =========== */
+
+.left_panel
+{
+    position: relative;
+    width: 47%;
+    min-height: 250px;
+    /* border: 0.2px solid blue; */
+}
+.left_panel .mySwiper2
+{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: rgb(245, 245, 245);
+}
+.left_panel .mySwiper2 .swiper-slide 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.left_panel .mySwiper2 .swiper-slide img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.left_panel .mySwiper
+{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+.left_panel .mySwiper .swiper-slide 
+{
+    width: 25%;
+  height: 100%;
+  background: rgb(245, 245, 245);
+  cursor: pointer;
+}
+
+
+  .left_panel .mySwiper .swiper-slide  img
+{
+    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+}
+.left_panel .mySwiper .swiper-slide-thumb-active img {
+    filter: grayscale(0);
+  }
+
+  /* =========== right =========== */
+
+  .right_panel
+{
+    position: relative;
+    width: 53%;
+    min-height: 250px;
+    padding-left: 30px;
+    /* border: 0.2px solid blue; */
+}
+  .right_panel .panel_content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  .right_panel .panel_content .product_name_sec
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+  .right_panel .panel_content .product_name_sec h2
+{
+    position: relative;
+    font-size: 19px;
+    line-height: 1;
+    font-weight: 500;
+}
+  .right_panel .panel_content .product_name_sec p
+{
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e31017;
+    margin-top: 12px;
+}
+
+
+  .right_panel .panel_content .product_description_section
+{
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+  .right_panel .panel_content .product_description_section .color_sec
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  .right_panel .panel_content .product_description_section .color_sec h5
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    width: 110px;
+}
+  .right_panel .panel_content .product_description_section .color_sec .box_sec
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  .right_panel .panel_content .product_description_section .color_sec .box_sec .color_box
+{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(240, 240, 240);
+    margin-right: 6px;
+}
+  .right_panel .panel_content .product_description_section .color_sec .box_sec .color_box:last-child
+{
+    margin-right: 0px;
+}
+.right_panel .panel_content .product_description_section .quantity_sec
+{
+    position: relative;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+  .right_panel .panel_content .product_description_section .quantity_sec h5
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    width: 110px;
+}
+  .right_panel .panel_content .product_description_section .quantity_sec .input_box
+{
+    position: relative;
+    width: 70px;
+    height: 32px;
+    border: 1px solid rgb(240, 240, 240);
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+  .right_panel .panel_content .product_description_section .quantity_sec .input_box input
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #555;
+}
+.right_panel .panel_content .product_description_section .size_sec
+{
+    position: relative;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+  .right_panel .panel_content .product_description_section .size_sec h5
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    width: 110px;
+}
+  .right_panel .panel_content .product_description_section .size_sec .input_box
+{
+    position: relative;
+    width: 140px;
+    height: 32px;
+    border: 1px solid rgb(240, 240, 240);
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+  .right_panel .panel_content .product_description_section .size_sec .input_box select
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #555;
+}
+  .right_panel .panel_content .product_description_section .size_sec a
+{
+    position: relative;
+    font-size: 12px;
+    color: #000;
+    font-weight: 500;
+    margin-left: 6px;
+}
+.right_panel .panel_content .product_description_section .feature_sec
+{
+    position: relative;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+  .right_panel .panel_content .product_description_section .feature_sec h5
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+  .right_panel .panel_content .product_description_section .feature_sec p
+{
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+}
+  .right_panel .panel_content .product_description_section .btns_sec
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+  .right_panel .panel_content .product_description_section .btns_sec button
+{
+    position: relative;
+    width: 150px;
+    height: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+  .right_panel .panel_content .product_description_section .btns_sec button:first-child
+{
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    margin-right: 15px;
+}
+  .right_panel .panel_content .product_description_section .btns_sec button:last-child
+{
+    background: #e31017;
+    border: 1px solid #e31017;
+    color: #fff;
+}
+  .right_panel .panel_content .product_description_section .delivery_details_sec
+{
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid rgb(240, 240, 240);
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+}
+  .right_panel .panel_content .product_description_section .delivery_details_sec .sec_row
+{
+    position: relative;
+    width: 100%;
+    padding: 7px 12px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+}
+  .right_panel .panel_content .product_description_section .delivery_details_sec .sec_row span
+{
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+}
+  .right_panel .panel_content .product_description_section .delivery_details_sec .sec_row p
+{
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 6px;
+    color: #666666;
+}
+
+
+
+
+
+
+.product_description_section
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 45px;
+}
+.product_description_section .ind_section
+{
+    position: relative;
+    width: 100%;
+    height: 33px;
+    padding: 0px 15px;
+}
+.product_description_section .ind_section .section_item
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+.product_description_section .ind_section .section_item a
+{
+    position: relative;
+    padding: 0px 12px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    height: 100%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.product_description_section .ind_section .section_item a.active
+{
+    border-bottom: 1px solid #e31017;
+    color: #e31017;
+}
+
+.product_description_section .item_section
+{
+    position: relative;
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.product_description_section .item_section .description_box
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 15px;
+}
+.product_description_section .item_section .description_box .box_item
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.product_description_section .item_section .description_box .box_item p
+{
+    font-size: 14px;
+    color: #000;
+}
+.product_description_section .item_section .description_box .box_item a
+{
+    font-size: 14px;
+    color: #777777;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.product_description_section .item_section .details_box
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product_description_section .item_section .details_box .box_table
+{
+    position: relative;
+    width: 50%;
+    padding: 0px 15px;
+}
+.product_description_section .item_section .details_box .box_table .table_body
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(240, 240, 240);
+    border-bottom: none;
+}
+.product_description_section .item_section .details_box .box_table .table_body .table_row
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 33px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+.product_description_section .item_section .details_box .box_table .table_body .table_row h5
+{
+    position: relative;
+    width: 120px;
+    height: 100%;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #000;
+    border-right: 1px solid rgb(240, 240, 240);
+}
+.product_description_section .item_section .details_box .box_table .table_body .table_row p
+{
+    position: relative;
+    width: calc(100% - 120px);
+    height: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: #666666;
+}

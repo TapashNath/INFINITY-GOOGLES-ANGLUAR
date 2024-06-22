@@ -1,0 +1,89 @@
+ <div class="page_content">
+   <div class="heading">
+     <h1>CMS Content</h1>
+   </div>
+   <div class="cms_items_ind">
+     <li><a [ngClass]="about === false?'':'active'" (click)="show('about')">About Us</a></li>
+     <li><a [ngClass]="contact === false?'':'active'" (click)="show('contact')">Contact Us</a></li>
+     <li><a [ngClass]="trms === false?'':'active'" (click)="show('trms')">Terms & Conditions</a></li>
+     <li><a [ngClass]="privacy === false?'':'active'" (click)="show('privacy')">Privacy & Safety Policies</a></li>
+     <li><a [ngClass]="payment === false?'':'active'" (click)="show('payment')">Payment Policies</a></li>
+     <li><a [ngClass]="return === false?'':'active'" (click)="show('return')">Return Policy</a></li>
+     <li><a [ngClass]="banner === false?'':'active'" (click)="show('banner')">Banners</a></li>
+   </div>
+   <div class="cms_items" [ngSwitch]="true">
+     <div class="about_section"
+       *ngSwitchCase="name === 'about' ||
+        name === 'trms' ||
+         name === 'privacy' ||
+          name === 'payment' ||
+           name === 'return'">
+       <form class="section_form" #AForm="ngForm" (ngSubmit)="submitData(AForm.value)">
+         <div class="form_box_1">
+           <h5>Description</h5>
+           <div class="input_box">
+             <textarea ngModel name="details" [value]="details" placeholder="Enter Description"></textarea>
+           </div>
+         </div>
+         <div class="form_btns">
+           <button>Add</button>
+           <button>Reset</button>
+         </div>
+       </form>
+     </div>
+
+     <div class="contact_section" *ngSwitchCase="name === 'contact'">
+       <form class="section_form" #ContactForm="ngForm" (ngSubmit)="submitContact(ContactForm.value)">
+
+         <div class="form_box_2">
+           <h5>Email ID</h5>
+           <div class="input_box">
+             <input type="text" ngModel name="email" [value]="email" placeholder="Enter Email ID">
+           </div>
+         </div>
+         <div class="form_box_2">
+           <h5>Contact Number</h5>
+           <div class="input_box">
+             <input type="text" ngModel name="number" [value]="number" placeholder="Enter Contact Number">
+           </div>
+         </div>
+         <div class="form_box_1">
+           <h5>Address</h5>
+           <div class="input_box">
+             <textarea ngModel name="address" [value]="address" placeholder="Enter Address"></textarea>
+           </div>
+         </div>
+         <div class="form_btns">
+           <button>Add</button>
+           <button>Reset</button>
+         </div>
+       </form>
+
+     </div>
+
+
+     <div class="banner_section" *ngSwitchCase="name === 'banner'">
+       <div class="section_item">
+         <div class="banner_img_section">
+           <div class="banner_img">
+             <a><img src="../../assets/img/b1.jpg" alt=""></a>
+           </div>
+           <div class="banner_img">
+             <a><img src="../../assets/img/b2.jpg" alt=""></a>
+           </div>
+           <div class="banner_img">
+             <a href="#">
+               <i class="fa-solid fa-image"></i>
+               <span>Drag and Drop here or Browse Files</span>
+             </a>
+           </div>
+         </div>
+         <div class="img_desp_section">
+           <li><span>Minimum dimensions to upload size:</span>1920x840 pixel</li>
+           <li><span>File size:</span>6MB maximum</li>
+           <li><span>Image Format:</span>jpeg, png</li>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>

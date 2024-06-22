@@ -1,0 +1,198 @@
+<!-- <h1>Single File Upload Demo</h1> -->
+<!--
+<form action="/uploadProfilePicture" enctype="multipart/form-data" method="POST">
+  <span>Upload Profile Picture:</span>
+  <input type="file" name="mypic" required /> <br>
+  <input type="submit" value="submit">
+</form> -->
+
+<div class="page_content">
+  <div class="category_items_ind">
+    <li><a [ngClass]=" category===false?'':'active'" (click)="showCategory()">Category</a></li>
+    <li><a [ngClass]=" fature==false?'':'active'" (click)="showFature()">Features</a></li>
+    <li><a [ngClass]=" size===false?'':'active'" (click)="showSize()">Size</a></li>
+  </div>
+  <div class="page_items">
+    <div class="category_section" *ngIf="category">
+      <div class="sec_head">
+        <h1>Category</h1>
+        <a (click)="showAddCategory()">Add Category</a>
+      </div>
+      <div class="sec_table">
+        <div class="table_content">
+          <div class="table_head">
+            <div class="slNo_box">
+              <p>SL. No.</p>
+            </div>
+            <div class="category_img_box">
+              <p>Category Image</p>
+            </div>
+            <div class="category_name_box">
+              <p>Name</p>
+            </div>
+            <div class="enable_box">
+              <p>Enable</p>
+            </div>
+            <div class="action_box">
+              <p>Actions</p>
+            </div>
+          </div>
+          <div class="table_body">
+            <div class="table_row" *ngFor="let category of categoryList let i=index">
+              <div class="slNo_box">
+                <p>{{i+1}}</p>
+              </div>
+              <div class="category_img_box">
+                <img src="./../../../assets/img/spec1 copy.png" alt="">
+              </div>
+              <div class="category_name_box">
+                <p>{{category.name}}</p>
+              </div>
+              <div class="enable_box">
+                <label class="switch">
+                   <input type="checkbox" (click)="statusCategory(category)" type="checkbox"
+                     [checked]="category.status">
+                   <span class="slider"></span>
+                </label>
+              </div>
+              <div class="action_box">
+               <a (click)="editCategory(category)"><i class=" fa-regular fa-pen-to-square"></i></a>
+               <a (click)="deleteCategory(category)"><i class=" fa-solid fa-trash"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature_section" *ngIf="fature">
+      <div class="sec_head">
+        <h1>Features</h1>
+        <a (click)="showAddFature()">Add Feature</a>
+      </div>
+      <div class="sec_table">
+        <div class="table_content">
+          <div class="table_head">
+            <div class="slNo_box">
+              <p>SL. No.</p>
+            </div>
+            <div class="feature_name_box">
+              <p>Name</p>
+            </div>
+            <div class="enable_box">
+              <p>Enable</p>
+            </div>
+            <div class="action_box">
+              <p>Actions</p>
+            </div>
+          </div>
+          <div class="table_body">
+            <div class="table_row" *ngFor="let fature of fatureList let i=index">
+              <div class="slNo_box">
+                <p>{{i+1}}</p>
+              </div>
+              <div class="feature_name_box">
+                <p>{{fature.name}}</p>
+              </div>
+              <div class="enable_box">
+                <label class="switch">
+                  <input type="checkbox" (click)="statusFature(fature)" type="checkbox" [checked]="fature.status">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="action_box">
+                <a (click)="editFature(fature)"><i class=" fa-regular fa-pen-to-square"></i></a>
+                <a (click)="deleteFature(fature)"><i class=" fa-solid fa-trash"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="size_section" *ngIf="size">
+      <div class="sec_head">
+        <h1>Size</h1>
+        <a (click)="showAddSize()">Add Size</a>
+      </div>
+      <div class="sec_table">
+        <div class="table_content">
+          <div class="table_head">
+            <div class="slNo_box">
+              <p>SL. No.</p>
+            </div>
+            <div class="size_name_box">
+              <p>Name</p>
+            </div>
+            <div class="enable_box">
+              <p>Enable</p>
+            </div>
+            <div class="action_box">
+              <p>Actions</p>
+            </div>
+          </div>
+          <div class="table_body">
+            <div class="table_row" *ngFor="let size of sizeList let i=index">
+              <div class="slNo_box">
+                <p>{{i+1}}</p>
+              </div>
+              <div class="size_name_box">
+                <p>{{size.name}}</p>
+              </div>
+              <div class="enable_box">
+                <label class="switch">
+                  <input (click)="statusSize(size)" type="checkbox" [checked]="size.status">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="action_box">
+                <a (click)="editSize(size)"><i class="fa-regular fa-pen-to-square"></i></a>
+                <a (click)="deleteSize(size)"><i class="fa-solid fa-trash"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="page_popup" [ngClass]="popup === false?'':'active'">
+  <div class="category_form" [ngClass]="addCategory === false?'':'active'">
+    <form class="form" #CategoryForm="ngForm" (ngSubmit)="submitCategory(CategoryForm.value)"
+      enctype="multipart/form-data">
+      <!-- <div class="category_image">
+        <div class="img_box">
+          <img [src]="image" alt="">
+          <input type="file" name="image" #file (change)="getImage($event)" style="display: none" #selectFile>
+        </div>
+        <a (click)="selectFile.click()"><i
+            class="fa-solid fa-pen"></i></a>
+      </div> -->
+      <input type="file" ngModel name="image" accept="image/*" (change)="getImage($event)">
+      <input type="hidden" ngModel name="id" [(ngModel)]="id" [value]="id">
+      <input type="text" ngModel [(ngModel)]="name" name="name" [value]="name" placeholder="Enter Size">
+
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div class="feature_form" [ngClass]="addFature === false?'':'active'">
+    <form class="form" #SizeForm="ngForm" (ngSubmit)="submitFature(SizeForm.value)">
+      <input type="hidden" ngModel name="id" [(ngModel)]="id" [value]="id">
+      <input type="text" ngModel [(ngModel)]="name" name="name" [value]="name" placeholder="Enter Size">
+
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div class="size_form" [ngClass]="addSize === false?'':'active'">
+    <form class="form" #SizeForm="ngForm" (ngSubmit)="submitSize(SizeForm.value)">
+      <input type="hidden" ngModel name="id" [(ngModel)]="id" [value]="id">
+      <input type="text" ngModel [(ngModel)]="name" name="name" [value]="name" placeholder="Enter Size">
+
+      <button>Submit</button>
+    </form>
+  </div>
+</div>

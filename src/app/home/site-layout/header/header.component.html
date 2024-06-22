@@ -1,0 +1,130 @@
+<div class="navbar">
+    <div class="navItem">
+        <div class="logo">
+            <img src="../../../assets/img/Logo.png" alt="">
+        </div>
+        <div class="search_box">
+            <input type="text" placeholder="Search by Product Name">
+            <button>Search</button>
+        </div>
+        <div class="items">
+            <div class="login_item" *ngIf="prelogin">
+                <p><i class="fa-solid fa-user"></i><a (click)="login()">Sign in</a>&<a (click)="register()">Register</a></p>
+            </div>
+            <div class="user_item" *ngIf="afterlogin">
+                <p (click)="showOption()"><i class="fa-solid fa-user"></i><a>John Doe</a></p>
+                <div [ngClass]="showUserOption === true? 'user_option active':'user_option'">
+                    <a>My Account</a>
+                    <a>My Orders</a>
+                    <a>Manage Address</a>
+                    <a>Change Password</a>
+                    <a>Logout</a>
+                </div>
+            </div>
+            <div class="cart_item">
+                <p><i class="fa-solid fa-bag-shopping"></i>My Cart</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper_overlay" *ngIf="showWrapper">
+
+    <!-- login box -->
+
+    <div class="login_box" *ngIf="showLogin">
+        <div class="box_top">
+            <h2>Login</h2>
+            <a (click)="login()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="box_form">
+            <div class="input_box">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="input_box">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="forgot">
+                <a (click)="forgotPass()">Forgot your password?</a>
+            </div>
+            <div class="btn">
+                <button (click)="showuser(); login()">Login</button>
+            </div>
+            <div class="redirection">
+                <p>Don't have an account?<a (click)="redirectRegister()">Register now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- registration box -->
+
+    <div class="registration_box" *ngIf="showRegister">
+        <div class="box_top">
+            <h2>Register Your Account</h2>
+            <a (click)="register()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="box_form">
+            <div class="input_box">
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="input_box">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="input_box">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="input_box">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="input_box">
+                <input type="password" placeholder="Confirm Password">
+            </div>
+            <div class="btn">
+                <button>Register</button>
+            </div>
+            <div class="redirection">
+                <p>Back to<a (click)="redirectLogin()">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- forgor password -->
+
+    <div class="forgotPassword_box" *ngIf="showForgot">
+        <div class="box_top">
+            <span>
+                <h2>Forgot Password</h2>
+                <p>Please enter your registered email address</p>
+            </span>
+            <a (click)="closeForgot()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="box_form">
+            <div class="input_box">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="btn">
+                <button (click)="resetPass()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- reset password -->
+
+    <div class="reset_box" *ngIf="showReset">
+        <div class="box_top">
+            <h2>Set New Password</h2>
+            <a (click)="closeReset()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="box_form">
+            <div class="input_box">
+                <input type="password" placeholder="New Password">
+            </div>
+            <div class="input_box">
+                <input type="password" placeholder="Confirm Password">
+            </div>
+            <div class="btn">
+                <button>Save</button>
+            </div>
+        </div>
+    </div>
+</div>
